@@ -1,0 +1,42 @@
+{
+   "ques" : [
+    "What symbol is this | ? |",
+    "What form of grammar is this example | Boom |",
+    "Full stops are also called",
+    "You must put a space ______ every comma in a sentence",
+    "Quotation marks are put _______ the words being quoted",
+    "Which can be used to express strong feelings in written English?",
+    "Which sentence is correct?",
+    "What form of grammar describes a word?",
+    "Which sentence has a describing a word in it?",
+    "What is an example of a simile?",
+    "What is an example of onomatopoeia?",
+    "What grammar is a name?",
+    "What symbol is this | * |",
+    "What symbol is this | / |",
+    "How does compounds words work in a sentence?",
+    "Who do you think will win the prize _____"
+    ],
+
+    "options" : [
+    ["Question mark", "semi colon", "apostrophe", "full stop"],
+    ["simile","rhyme","onomatopoeia","juxtaposition"],
+    ["end points", "period", "points", "dots"],
+    ["after","before","around","and a full stop after"],
+    ["after", "before", "before and after", "none of the above"],
+    ["a quotation mark", "a backslash", "brackets", "an exclamation mark"],
+    ["Have an nice day", " Have a nIce day.", "have a nice day.", "Have a nice day."],
+    ["noun", "hyperbole", "adjective", "simile"],
+    ["It was a super cold day.", "I like chicken nuggets.", "Hi Mr. Baker, hows it going?", "none of the above"],
+    ["The train was a wreck.", "My shoes shine like the moon.", "Boom! Goes the cannon.", "The cat was soft and sleek."],
+    ["The train was a wreck.", "My shoes shine like the moon.", "Boom! Goes the cannon.", "The cat was soft and sleek."],
+    ["pronoun", "verb", "noun", "adverb"],
+    ["astrix", "semi colon", "hyphen", "period"],
+    ["hyphen", "apostrophe", "comma", "slash"],
+    ["in between words", " linking two words together", " to separate a sentence", "combines two opposite ideas"],
+    [".", "?", "!", "$"]
+    ],
+
+    "ans" : [ 1, 3, 2, 1, 3, 4, 4, 3, 1, 2, 3, 1, 1, 4, 2, 2]
+
+}
