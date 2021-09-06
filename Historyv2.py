@@ -1,5 +1,4 @@
 from tkinter import *
-from tkinter import messagebox as mb
 import json
 import random
 
@@ -7,7 +6,7 @@ root = Tk()
 root.geometry("455x400")
 root.configure(bg="light blue")
 root.title("Punctuation Quiz")
-with open('quiz.json') as f:
+with open('Punctuation.json') as f:
     obj = json.load(f)
 q = (obj['ques'])
 options = (obj['options'])
@@ -18,11 +17,12 @@ random.shuffle(L)
 q, options, a = zip(*L)
 
 
-
 class Quiz:
     def __init__(self):
         self.qn = 8
         self.qno = 1
+        self.history_questions = []
+        self.history_answers = []
         self.quest = StringVar()
         self.ques = self.question(self.qn)
         self.opt_selected = IntVar()
@@ -30,18 +30,14 @@ class Quiz:
         self.display_options(self.qn)
         self.buttons()
         self.correct = 0
-        #self.histroy = self.opt_selected
-
-
-    def history(self):
-        return False
-
 
     def question(self, qn):
-        t = Label(root, text="Punctuation quiz questions", width=50, bg="blue", fg="white", font=("times", 12, "bold"))
+        t = Label(root, text="~\b Punctuation ._. quiz questions \b~", width=50, bg="blue", fg="white",
+                  font=("arial", 12, "bold"))
         t.place(x=0, y=2)
         self.quest.set(str(self.qno) + ". " + q[qn])
-        qn = Label(root, textvariable=self.quest, width=60, font=("times", 12, ""), bg="light blue", anchor="w")
+        self.history(q[qn])
+        qn = Label(root, textvariable=self.quest, width=60, font=("arial", 11, ""), bg="light blue", anchor="w")
         qn.place(x=5, y=50)
         return qn
 
@@ -50,9 +46,9 @@ class Quiz:
         b = []
         yp = 100
         while val < 4:
-            btn = Radiobutton(root, text=" ", command=self.next_button, variable=self.opt_selected, value=val + 1,
+            btn = Radiobutton(root, text=" ", variable=self.opt_selected, value=val + 1,
                               width=30,
-                              bg="pink", fg="black", font=("times", 16, "bold"), anchor="w")
+                              bg="pink", fg="black", font=("arial", 16, "bold"), anchor="w")
             b.append(btn)
             btn.place(x=25, y=yp)
             val += 1
@@ -67,15 +63,22 @@ class Quiz:
             self.opts[val]['text'] = op
             val += 1
 
-    def buttons(self):
-        n_button = Button(root, text="Next", command=self.next_button, width=10, bg="green", fg="white",
-                          font=("times", 16, "bold"))
-        n_button.place(x=60, y=330)
+    def buttons(self, mode="normal"):
+        if mode == "normal":
+
+            n_button = Button(root, text="Next", command=self.next_button, width=10, bg="green", fg="white",
+                              font=("arial", 16, "bold"))
+            n_button.place(x=60, y=330)
+
         quit_button = Button(root, text="Quit", command=root.destroy, width=10, bg="red", fg="white",
-                             font=("times", 16, "bold"))
+                             font=("arial", 16, "bold"))
         quit_button.place(x=260, y=330)
 
     def checkins(self, qn):
+        if self.opt_selected.get() == 0:
+            self.history("no answer given", 'answer')
+        else:
+            self.history(options[qn][self.opt_selected.get() - 1], "answer")
         if self.opt_selected.get() == a[qn]:
             return True
 
@@ -85,23 +88,28 @@ class Quiz:
         self.qn += 1
         self.qno += 1
         if self.qn == len(q):
-            self.display_result()
+            self.buttons("the end :(")
         else:
             self.quest.set(str(self.qno) + ". " + q[self.qn])
+            self.history(q[self.qn])
             self.display_options(self.qn)
 
-    def display_result(self):
-        score = int(self.correct / len(q) * 200)
-        result = "Score: " + str(score) + "%"
-        wc = len(q) - self.correct
-        correct = "No. of correct answers: " + str(self.correct)
-        wrong = "No. of wrong answers: " + str(wc - 8)
-        #history = "list. of questions: " + str(self.histroy)
-        #answers = str(self.history)
-        mb.showinfo("Result", "\n".join([result, correct, wrong]))
+    def history(self, text, mode='question'):
 
+        if mode == "question":
 
+            for i in range(len(obj['ques'])):
+                if text == q[i]:
+                    break
+            self.history_questions.append([text, options[i][a[i] - 1]])
 
+        else:
+            self.history_answers.append(text)
+
+        output = ""
+        filename = "Answers"
+        with open(filename + '.txt', 'w') as f:
+            f.write("The most recent quiz's questions and answers are as follows:\n" + output)
 
 
 quiz = Quiz()

@@ -30,7 +30,7 @@
     ["It was a super cold day.", "I like chicken nuggets.", "Hi Mr. Baker, hows it going?", "none of the above"],
     ["The train was a wreck.", "My shoes shine like the moon.", "Boom! Goes the cannon.", "The cat was soft and sleek."],
     ["The train was a wreck.", "My shoes shine like the moon.", "Boom! Goes the cannon.", "The cat was soft and sleek."],
-    ["pronoun", "verb", "noun", "adverb"],
+    ["noun", "verb", "pronoun", "adverb"],
     ["astrix", "semi colon", "hyphen", "period"],
     ["hyphen", "apostrophe", "comma", "slash"],
     ["in between words", " linking two words together", " to separate a sentence", "combines two opposite ideas"],
