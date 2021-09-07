@@ -113,11 +113,7 @@ class Quiz:
 
         else:
             self.history_answers.append(text)
-
-        output = ""
-        filename = "Answers"
-        with open(filename + '.txt', 'w') as f:
-            f.write("The most recent quiz's questions and answers are as follows:\n" + output)
+            print("history_answers")
 
 
 quiz = Quiz()
