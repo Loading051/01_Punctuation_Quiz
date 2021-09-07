@@ -3,6 +3,7 @@ from tkinter import messagebox as mb
 import json
 import random
 
+# root for the gui
 root = Tk()
 root.geometry("455x400")
 root.configure(bg="light blue")
@@ -19,6 +20,7 @@ q, options, a = zip(*L)
 
 
 class Quiz:
+    # defining the terms
     def __init__(self):
         self.qn = 8
         self.qno = 1
@@ -33,6 +35,7 @@ class Quiz:
         self.correct = 0
         self.export_frame = Frame(width=50, height=100)
 
+    # this will add the question to the quiz
     def question(self, qn):
         t = Label(root, text="~\b Punctuation ._. quiz questions \b~", width=50, bg="blue", fg="white",
                   font=("arial", 12, "bold"))
@@ -43,6 +46,7 @@ class Quiz:
         qn.place(x=5, y=50)
         return qn
 
+    # this will add buttons for the answers to the gui.
     def radio_buttons(self):
         val = 0
         b = []
@@ -57,6 +61,7 @@ class Quiz:
             yp += 50
         return b
 
+    # will add a plus one to the numbers on the questions
     def display_options(self, qn):
         val = 0
         self.opt_selected.set(0)
@@ -65,6 +70,7 @@ class Quiz:
             self.opts[val]['text'] = op
             val += 1
 
+    # this will add buttons for the next and quit button of the gui
     def buttons(self, mode="normal"):
         if mode == "normal":
 
@@ -80,6 +86,7 @@ class Quiz:
                              font=("arial", 16, "bold"))
         quit_button.place(x=260, y=330)
 
+    # this function will check if the answer had been answered or not and will reply accordingly
     def checkins(self, qn):
         if self.opt_selected.get() == 0:
             self.history("no answer given", 'answer')
@@ -88,6 +95,7 @@ class Quiz:
         if self.opt_selected.get() == a[qn]:
             return True
 
+    # when clicking the next button this will check if the answer is right or not and then add to the score
     def next_button(self):
         if self.checkins(self.qn):
             self.correct += 1
@@ -101,6 +109,7 @@ class Quiz:
             self.history(q[self.qn])
             self.display_options(self.qn)
 
+    # this function will record the history of the answer i put or do not put in
     def history(self, text, mode='question'):
 
         if mode == "question":
@@ -113,6 +122,7 @@ class Quiz:
         else:
             self.history_answers.append(text)
 
+    # this will format the text so that when printed out into a .txt file it will have the proper formatting
     def format_history(self):
         history = self.history_questions
         output = ''
@@ -123,6 +133,8 @@ class Quiz:
             i = i + 1
         return output
 
+    # this will be the display results GUI, it will hold the score percentage, number or questions right and wrong
+    # it will also hold the results and all the answers
     def display_result(self):
         score = int(self.correct / len(q) * 200)
         result = "Score: " + str(score) + "% \n"

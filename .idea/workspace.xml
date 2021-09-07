@@ -5,21 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b90b0191-1d00-4882-9ee9-75c46ec6b612" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Final_outcome.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Historyv1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Historyv2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quiz_results_GUIv1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quiz_results_GUIv2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Quiz_results_GUIv3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generate_questionsv1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/historyv3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quiz_questions_randomizerv1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/01_Quiz_Menu_GUI.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Final_outcome.py" beforeDir="false" afterPath="$PROJECT_DIR$/Final_outcome.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Historyv1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Historyv1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Historyv2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Historyv2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quiz_results_GUIv1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz_results_GUIv1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quiz_results_GUIv2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz_results_GUIv2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quiz_results_GUIv3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz_results_GUIv3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bruh.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz.json" beforeDir="false" afterPath="$PROJECT_DIR$/Punctuation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate_questionsv1.py" beforeDir="false" afterPath="$PROJECT_DIR$/generate_questionsv1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/historyv3.py" beforeDir="false" afterPath="$PROJECT_DIR$/historyv3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz_guiv1.py" beforeDir="false" afterPath="$PROJECT_DIR$/quiz_guiv1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz_questions_randomizerv1.py" beforeDir="false" afterPath="$PROJECT_DIR$/quiz_questions_randomizerv1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test of the test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/quiz_guiv1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

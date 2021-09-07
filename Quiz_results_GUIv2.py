@@ -100,6 +100,7 @@ class Quiz:
             self.history(q[self.qn])
             self.display_options(self.qn)
 
+    # this function will record the history of the answer i put or do not put in
     def history(self, text, mode='question'):
 
         if mode == "question":
@@ -112,6 +113,7 @@ class Quiz:
         else:
             self.history_answers.append(text)
 
+    # this will format the text so that when printed out into a .txt file it will have the proper formatting
     def format_history(self):
         history = self.history_questions
         output = ''
@@ -122,6 +124,7 @@ class Quiz:
             i = i + 1
         return output
 
+    # this will be the display results GUI, it will hold the score percentage, number or questions right and wrong
     def display_result(self):
         score = int(self.correct / len(q) * 200)
         result = "Score: " + str(score) + "% \n"
