@@ -33,7 +33,6 @@ class Quiz:
         self.display_options(self.qn)
         self.buttons()
         self.correct = 0
-        self.export_frame = Frame(width=50, height=100)
 
     # this will add the question to the quiz
     def question(self, qn):
@@ -78,7 +77,7 @@ class Quiz:
                               font=("arial", 16, "bold"))
             n_button.place(x=60, y=330)
         else:
-            n_button = Button(root, text="Export", command=self.export_frame, width=10, bg="Yellow", fg="white",
+            n_button = Button(root, text="Export", width=10, bg="Yellow", fg="white",
                               font=("arial", 16, "bold"))
             n_button.place(x=60, y=330)
 
@@ -89,6 +88,7 @@ class Quiz:
     # this function will check if the answer had been answered or not and will reply accordingly
     def checkins(self, qn):
         if self.opt_selected.get() == 0:
+            # This is for error prevention, so if the user doesnt answer it will put "no answer given"
             self.history("no answer given", 'answer')
         else:
             self.history(options[qn][self.opt_selected.get() - 1], "answer")
@@ -142,8 +142,8 @@ class Quiz:
         correct = "No. of correct answers: " + str(self.correct) + "\n"
         history = "list of questions answers: \n \n" + self.format_history()
         wrong = "No. of wrong answers: " + str(wc - 8) + "\n"
-        mb.showinfo("Result", "\n".join([result, correct, wrong, history]))
-        export_button = Button(root, text="Export", width=10, bg="red", command=self.export_frame, fg="white",
+        mb.showinfo("Results", "\n".join([result, correct, wrong, history]))
+        export_button = Button(root, text="Export", width=10, bg="red", fg="white",
                                font=("arial", 16, "bold"))
         export_button.place(x=60, y=330)
         output = self.format_history()

@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox as mb
 import json
 import random
 
@@ -76,7 +77,7 @@ class Quiz:
                               font=("arial", 16, "bold"))
             n_button.place(x=60, y=330)
         else:
-            n_button = Button(root, text="Export", command=self.export_frame, width=10, bg="Yellow", fg="white",
+            n_button = Button(root, text="Export", width=10, bg="Yellow", fg="white",
                               font=("arial", 16, "bold"))
             n_button.place(x=60, y=330)
 
@@ -87,6 +88,7 @@ class Quiz:
     # this function will check if the answer had been answered or not and will reply accordingly
     def checkins(self, qn):
         if self.opt_selected.get() == 0:
+            # This is for error prevention, so if the user doesnt answer it will put "no answer given"
             self.history("no answer given", 'answer')
         else:
             self.history(options[qn][self.opt_selected.get() - 1], "answer")
@@ -130,6 +132,9 @@ class Quiz:
                      item[1] + '\n'
             i = i + 1
         return output
+
+    def display_result(self):
+        mb.showinfo("Result")
 
 
 quiz = Quiz()

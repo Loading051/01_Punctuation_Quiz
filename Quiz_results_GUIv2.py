@@ -87,6 +87,7 @@ class Quiz:
 
     def checkins(self, qn):
         if self.opt_selected.get() == 0:
+            # This is for error prevention, so if the user doesnt answer it will put "no answer given"
             self.history("no answer given", 'answer')
         else:
             self.history(options[qn][self.opt_selected.get() - 1], "answer")

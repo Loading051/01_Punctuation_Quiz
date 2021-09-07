@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b90b0191-1d00-4882-9ee9-75c46ec6b612" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Final_outcome.py" beforeDir="false" afterPath="$PROJECT_DIR$/Final_outcome.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quiz_results_GUIv1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz_results_GUIv1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quiz_results_GUIv2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz_results_GUIv2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Quiz_results_GUIv3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Quiz_results_GUIv3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/historyv3.py" beforeDir="false" afterPath="$PROJECT_DIR$/historyv3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +52,7 @@
       <recent name="C:\Users\mike_\OneDrive\13DTC\01_Punctuation_Quiz" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Historyv2">
+  <component name="RunManager" selected="Python.Historyv1">
     <configuration name="Historyv1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="01_Punctuation_Quiz" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -61,27 +66,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Historyv1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Historyv2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="01_Punctuation_Quiz" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Historyv2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -132,7 +116,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="historyv3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="quiz_guiv2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="01_Punctuation_Quiz" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -144,7 +128,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/historyv3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/quiz_guiv2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="quiz_questions_randomizerv1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="01_Punctuation_Quiz" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/quiz_questions_randomizerv1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -155,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Historyv2" />
-        <item itemvalue="Python.historyv3" />
         <item itemvalue="Python.Historyv1" />
+        <item itemvalue="Python.quiz_questions_randomizerv1" />
         <item itemvalue="Python.generate_questionsv2" />
         <item itemvalue="Python.generate_questionsv1" />
+        <item itemvalue="Python.quiz_guiv2" />
       </list>
     </recent_temporary>
   </component>
@@ -196,10 +201,6 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/generate_questionsv1.py</url>
           <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Quiz_results_GUIv1.py</url>
-          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

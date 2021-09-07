@@ -89,6 +89,7 @@ class Quiz:
     # this function will check if the answer had been answered or not and will reply accordingly
     def checkins(self, qn):
         if self.opt_selected.get() == 0:
+            # This is for error prevention, so if the user doesnt answer it will put "no answer given"
             self.history("no answer given", 'answer')
         else:
             self.history(options[qn][self.opt_selected.get() - 1], "answer")
@@ -143,7 +144,7 @@ class Quiz:
         history = "list of questions answers: \n \n" + self.format_history()
         wrong = "No. of wrong answers: " + str(wc - 8) + "\n"
         mb.showinfo("Result", "\n".join([result, correct, wrong, history]))
-        export_button = Button(root, text="Export", width=10, bg="red", command=self.export_frame, fg="white",
+        export_button = Button(root, text="Export", width=10, bg="red", fg="white",
                                font=("arial", 16, "bold"))
         export_button.place(x=60, y=330)
         output = self.format_history()
