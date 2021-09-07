@@ -3,6 +3,7 @@ from tkinter import messagebox as mb
 import json
 import random
 
+# root for the gui
 root = Tk()
 root.geometry("455x400")
 root.configure(bg="light blue")
@@ -19,6 +20,7 @@ q, options, a = zip(*L)
 
 
 class Quiz:
+    # defining the terms
     def __init__(self):
         self.qn = 8
         self.qno = 1
@@ -32,6 +34,7 @@ class Quiz:
         self.buttons()
         self.correct = 0
 
+    # this will add the question to the quiz
     def question(self, qn):
         t = Label(root, text="~\b Punctuation ._. quiz questions \b~", width=50, bg="blue", fg="white",
                   font=("arial", 12, "bold"))
@@ -42,6 +45,7 @@ class Quiz:
         qn.place(x=5, y=50)
         return qn
 
+    # this will add buttons for the answers to the gui.
     def radio_buttons(self):
         val = 0
         b = []
@@ -56,6 +60,7 @@ class Quiz:
             yp += 50
         return b
 
+    # will add a plus one to the numbers on the questions
     def display_options(self, qn):
         val = 0
         self.opt_selected.set(0)
@@ -64,6 +69,7 @@ class Quiz:
             self.opts[val]['text'] = op
             val += 1
 
+    # this will add buttons for the next and quit button of the gui
     def buttons(self, mode="normal"):
         if mode == "normal":
 
@@ -71,7 +77,7 @@ class Quiz:
                               font=("arial", 16, "bold"))
             n_button.place(x=60, y=330)
         else:
-            n_button = Button(root, text="Export", command=self.export_frame, width=10, bg="Yellow", fg="white",
+            n_button = Button(root, text="Export", width=10, bg="Yellow", fg="white",
                               font=("arial", 16, "bold"))
             n_button.place(x=60, y=330)
 

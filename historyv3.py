@@ -1,5 +1,4 @@
 from tkinter import *
-from tkinter import messagebox as mb
 import json
 import random
 
@@ -33,7 +32,6 @@ class Quiz:
         self.display_options(self.qn)
         self.buttons()
         self.correct = 0
-        self.export_frame = Frame(width=50, height=100)
 
     # this will add the question to the quiz
     def question(self, qn):
@@ -78,7 +76,7 @@ class Quiz:
                               font=("arial", 16, "bold"))
             n_button.place(x=60, y=330)
         else:
-            n_button = Button(root, text="Export", command=self.export_frame, width=10, bg="Yellow", fg="white",
+            n_button = Button(root, text="Export", width=10, bg="Yellow", fg="white",
                               font=("arial", 16, "bold"))
             n_button.place(x=60, y=330)
 
@@ -103,7 +101,6 @@ class Quiz:
         self.qno += 1
         if self.qn == len(q):
             self.buttons("the end :(")
-            self.display_result()
         else:
             self.quest.set(str(self.qno) + ". " + q[self.qn])
             self.history(q[self.qn])
@@ -131,22 +128,6 @@ class Quiz:
                      item[1] + '\n'
             i = i + 1
         return output
-
-    def display_result(self):
-        score = int(self.correct / len(q) * 200)
-        result = "Score: " + str(score) + "% \n"
-        wc = len(q) - self.correct
-        correct = "No. of correct answers: " + str(self.correct) + "\n"
-        history = "list of questions answers: \n \n" + self.format_history()
-        wrong = "No. of wrong answers: " + str(wc - 8) + "\n"
-        mb.showinfo("Result", "\n".join([result, correct, wrong, history]))
-        export_button = Button(root, text="Export", width=10, bg="red", command=self.export_frame, fg="white",
-                               font=("arial", 16, "bold"))
-        export_button.place(x=60, y=330)
-        output = self.format_history()
-        filename = "Answers"
-        with open(filename + '.txt', 'w') as f:
-            f.write("The most recent quiz's questions and answers are as follows:\n" + output)
 
 
 quiz = Quiz()
