@@ -1,6 +1,5 @@
 from tkinter import *
 import json
-import random
 
 # root for the gui
 root = Tk()
@@ -14,14 +13,13 @@ options = (obj['options'])
 a = (obj['ans'])
 z = zip(q, options, a)
 L = list(z)
-random.shuffle(L)
 q, options, a = zip(*L)
 
 
 class Quiz:
     # defining the terms
     def __init__(self):
-        self.qn = 8
+        self.qn = 0
         self.qno = 1
         self.history_questions = []
         self.history_answers = []
@@ -29,7 +27,6 @@ class Quiz:
         self.ques = self.question(self.qn)
         self.opt_selected = IntVar()
         self.opts = self.radio_buttons()
-        self.display_options(self.qn)
         self.buttons()
         self.correct = 0
 
@@ -59,13 +56,8 @@ class Quiz:
         return b
 
     # will add a plus one to the numbers on the questions
-    def display_options(self, qn):
-        val = 0
-        self.opt_selected.set(0)
-        self.ques['text'] = q[qn]
-        for op in options[qn]:
-            self.opts[val]['text'] = op
-            val += 1
+
+
 
     # this will add buttons for the next and quit button of the gui
     def buttons(self, mode="normal"):
@@ -93,7 +85,6 @@ class Quiz:
             self.buttons("the end :(")
         else:
             self.quest.set(str(self.qno) + ". " + q[self.qn])
-            self.display_options(self.qn)
 
 
 quiz = Quiz()

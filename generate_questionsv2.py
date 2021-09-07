@@ -1,6 +1,5 @@
 from tkinter import *
 import json
-import random
 
 # root for the gui
 root = Tk()
@@ -14,14 +13,13 @@ options = (obj['options'])
 a = (obj['ans'])
 z = zip(q, options, a)
 L = list(z)
-random.shuffle(L)
 q, options, a = zip(*L)
 
 
 class Quiz:
     # defining the terms
     def __init__(self):
-        self.qn = 8
+        self.qn = 0
         self.qno = 1
         self.quest = StringVar()
         self.ques = self.question(self.qn)

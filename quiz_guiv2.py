@@ -1,21 +1,10 @@
 from tkinter import *
-import json
-import random
 
 # root for the gui
 root = Tk()
 root.geometry("455x400")
 root.configure(bg="light blue")
 root.title("Punctuation Quiz")
-with open('Punctuation.json') as f:
-    obj = json.load(f)
-q = (obj['ques'])
-options = (obj['options'])
-a = (obj['ans'])
-z = zip(q, options, a)
-L = list(z)
-random.shuffle(L)
-q, options, a = zip(*L)
 
 
 class Quiz:
@@ -29,14 +18,12 @@ class Quiz:
         self.opts = self.radio_buttons()
         self.display_options(self.qn)
         self.buttons()
-        self.correct = 0
 
     # this will add the question to the quiz
     def question(self, qn):
         t = Label(root, text="~\b Punctuation ._. quiz questions \b~", width=50, bg="blue", fg="white",
                   font=("arial", 12, "bold"))
         t.place(x=0, y=2)
-        self.quest.set(str(self.qno) + ". " + q[qn])
         qn = Label(root, textvariable=self.quest, width=60, font=("arial", 11, ""), bg="light blue", anchor="w")
         qn.place(x=5, y=50)
         return qn
@@ -58,12 +45,7 @@ class Quiz:
 
     # will add a plus one to the numbers on the questions
     def display_options(self, qn):
-        val = 0
         self.opt_selected.set(0)
-        self.ques['text'] = q[qn]
-        for op in options[qn]:
-            self.opts[val]['text'] = op
-            val += 1
 
     # this will add buttons for the next and quit button of the gui
     def buttons(self, mode="normal"):
@@ -76,22 +58,10 @@ class Quiz:
                              font=("arial", 16, "bold"))
         quit_button.place(x=260, y=330)
 
-    # this function will check if the answer had been answered or not and will reply accordingly
-    def checkins(self, qn):
-        if self.opt_selected.get() == a[qn]:
-            return True
-
     # when clicking the next button this will check if the answer is right or not and then add to the score
     def next_button(self):
-        if self.checkins(self.qn):
-            self.correct += 1
         self.qn += 1
         self.qno += 1
-        if self.qn == len(q):
-            self.buttons("the end :(")
-        else:
-            self.quest.set(str(self.qno) + ". " + q[self.qn])
-            self.display_options(self.qn)
 
 
 quiz = Quiz()
